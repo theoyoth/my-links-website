@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import logo from '../../public/img/logo.png';
+---
+
+<nav class="px-32 pt-10 flex justify-between items-center relative z-10">
+  <div class="flex items-center space-x-4">
+    <Image src={logo} alt="logo" width="40"
+    height="40" />
+    <h1 class="text-3xl font-extrabold">THEOYOTH</h1>
+  </div>
+  <div>
+    <a href="mailto:theobantang1@gmail.com?subject=Feedback" class="max-w-max text-lime-400 bg-blue-600 selection:bg-lime-400 selection:text-white text-xl font-bold p-2 rounded-md">
+      📧 Reach me out
+    </a>
+  </div>
+</nav>

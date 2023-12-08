@@ -1,0 +1,47 @@
+---
+import { Image } from 'astro:assets';
+import Navbar from '../components/Navbar.astro';
+import bgImage from '../../public/img/web.webp'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/ico" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">		
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Theo::My-Links</title>
+	</head>
+	<body class="max-h-screen overflow-hidden">
+		<Image src={bgImage} alt="background image" class="absolute top-0 left-0 z-0" />
+    <Navbar />
+		<slot />
+    <footer class="px-32 w-full absolute z-10">
+      <p class="text-[#0e0e0e] font-semibold text-center text-xs">&copy;{new Date().getFullYear()} Theo. All Rights Reserved.</p>
+    </footer>
+	</body>
+</html>
+
+<style>
+	@font-face {
+		font-family: "Source-Code-Pro";
+		src: local("Source Code Pro Semibold"), url(../public/fonts/SourceCodePro-Semibold.ttf);
+		font-weight: 600;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "Source-Code-Pro";
+		src: local("Source Code Pro Black"), url(../public/fonts/SourceCodePro-Black.ttf);
+		font-weight: 800;
+		font-style: normal;
+	}
+
+	html{
+		font-family: "Source-Code-Pro";
+	}
+</style>

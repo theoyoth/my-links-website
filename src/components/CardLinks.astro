@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+const {link,icon,title,p} = Astro.props
+---
+
+<div class="group">
+  <div class="cursor-pointer w-[300px] bg-[#dbdbdb] border-4 border-[#0e0e0e] hover:bg-lime-400 transition-all duration-75 ease-in-out rounded-md">
+    <a href={link} target="_blank" class="flex space-x-4 items-center justify-center py-2">
+      <Image src={icon} alt={title} width="30" height="30" />
+      <p class="text-xl font-semibold">{title}</p>
+    </a>
+  </div>
+  <div class="w-[300px] absolute invisible group-hover:visible flex space-x-4 items-center p-2 bg-blue-600 rounded-md">
+    <p class="text-[#0e0e0e] text-sm font-semibold">{p}</p>
+  </div>
+</div>

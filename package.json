@@ -1,0 +1,18 @@
+{
+  "name": "all-my-links-website",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.0.2",
+    "@fontsource/source-code-pro": "^5.0.15",
+    "astro": "^3.5.3",
+    "tailwindcss": "^3.3.5"
+  }
+}

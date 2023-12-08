@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layout/baseLayout.astro"
+
+import Card from "../components/CardLinks.astro";
+import Data from "../content/data"
+---
+
+<BaseLayout>
+	<main class="px-32 relative z-10">
+		<section>
+			<div class="py-8">
+				<h1 class="max-w-max text-lime-400 text-[3.4rem] font-extrabold bg-blue-600  selection:bg-lime-400 selection:text-white p-2 rounded-lg">🖐WELCOME TO MY LINKS</h1>
+				<h2 class="mt-4 text-5xl text-[#0e0e0e] font-extrabold">My name is <span class="text-blue-600">Theo</span> 😎</h2>
+				<p class="mt-2 text-xl text-[#0e0e0e] font-semibold">this is website where provide all possible links of my media that you can visit.</p>
+			</div>
+			<div class="py-2 grid grid-cols-3 gap-4">
+				{Data.map((link) => (
+						<Card {...link} />
+				))}
+			</div>
+		</section>
+	</main>
+</BaseLayout>
+../content/data
