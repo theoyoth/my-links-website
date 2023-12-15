@@ -17,11 +17,11 @@ import bgImage from '../../public/img/web.webp'
 		<meta name="generator" content={Astro.generator} />
 		<title>Theo::My-Links</title>
 	</head>
-	<body class="max-h-screen overflow-hidden">
-		<Image src={bgImage} alt="background image" class="absolute top-0 left-0 z-0" />
+	<body class="max-h-[100dvh] overflow-hidden">
+		<Image src={bgImage} alt="background image" format='webp' class="absolute top-0 bottom-0 left-0 z-0 h-full" />
     <Navbar />
 		<slot />
-    <footer class="px-32 w-full absolute z-10">
+    <footer class="px-2 md:px-32 w-full absolute z-10">
       <p class="text-[#0e0e0e] font-semibold text-center text-xs">&copy;{new Date().getFullYear()} Theo. All Rights Reserved.</p>
     </footer>
 	</body>
